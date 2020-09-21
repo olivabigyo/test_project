@@ -1,7 +1,8 @@
 Story:
 - Alice creates a local repository and then one on GitHub
 - Alice adds remote the local repository to GitHub
-- Alice invite Bob to this GitHub repositoryBob clones this repository from GitHub to his local workspace
+- Alice invite Bob to this GitHub repository
+- Bob clones this repository from GitHub to his local workspace
 - They work local and push commits to GitHub
 ---
 #### Alice's First task:
@@ -18,7 +19,7 @@ I create a new folder eg. `git_exercise` and initialize as a git repository and 
          + **Ctrl+\`** on English keyboard or
          + in menu **Terminal>New Terminal**
       2. the path is now my new folder and I initialize a git repository with typing in terminal: `git init`
-3) I type git status in terminal to check if it's ok
+3) I type `git status` in terminal to check if it's ok
 4) I create something eg. `readme.md` or `index.html` and save
 5) I add the files to the staging area (aka. index) by typing in the terminal
    - `git add .`  or
@@ -62,3 +63,11 @@ I accept the invitation and clone Alice's repository
 2) I log in to GitHub else it won't work :)
 3) I click the See Invitation link in the email
 4) I click on the Accept Invitation button on the GitHub page
+5) On the project page I click the Code button and copy or note the url 
+6) I open a terminal with the right path where to clone eg. `Documents/Modul_5`
+   - in File Explorer right click and GitBash here
+   - navigate with the `cd` and `cd..` command
+6) I type `git clone https://github.com/olivabigyo/test_project.git` or 
+    `git clone https://github.com/olivabigyo/test_project.git student_project` if I want to rename the project in local to student_project
+7) I navigate in with typing `cd test_project` or `cd student_project` if I renamed it
+8) I type `git status` to check if it's ok :)
