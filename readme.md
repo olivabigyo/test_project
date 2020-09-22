@@ -32,7 +32,7 @@ repeat #3.
 It is ready to be pushed to GitHub
 
 #### Alice's Second Task:
-I create a new repository on GitHub and push my local one to it
+I create a new repository on GitHub and set up as remote origin to my local one
 1) I open GitHub in a browser and log in
 2) I go to the repositories tab and click the **New** button on the right, or by choosing **New Repository** from the "+" drop-down in the top-right corner
 3) I type a name without spaces eg. `test_project`.
@@ -81,7 +81,7 @@ I learn the `git status -s` or `git status --short` command flags in the termina
 - I can modify and save an untracked file, like making a small css reset in the `style.css`; then it is still untracked with the `??` flag
 - I can add an untracked file to the staging area: `git add style.css` then it gets a simple `A ` flag
 - I can modify and save a staged file, eg. adding a body background-color in the `style.css`, then it has `AM` or `MM` flag as added but then modified again, so it has both staged and unstaged changes, if I commit now, only the staged changes will be committed (css reset but no background-color)
-- I can modify and save a tracked file, like the `index.html`, which was unchanged since the last clone/pull/push action, for example I can create a new div. Then it will have the `' M'` flag, meaning unstaged but modified. If I commit now, this div will be not committed!
+- I can modify and save a tracked file, like the `index.html`, which was unchanged since the last clone/pull/push action, for example I can create a new div. Then it will have the ` M` flag, meaning unstaged but modified. If I commit now, this div will be not committed!
 
 I can check these changes in the Source Control Pane in VSCode: **Staged Changes**: style.css M, **Changes**: index.html M, style.css M
 
@@ -104,3 +104,10 @@ BUT, to collaborate with Bob/Alice:
 Notes to self: The `git add .` command is not always the right choice, I might add unwanted or temporary files to the staging area.
 So be careful and learn more about `.gitignore`, which can help.
 The `git commit` without a message doesn't work, always provide a description.
+
+---
+Todo:
+- commit message conventions
+- how to resolve conflicts
+- merge, fetch, publish, fork, pull request etc.
+- gitignore and regular expressions
