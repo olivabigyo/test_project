@@ -79,14 +79,15 @@ I learn the `git status -s` or `git status --short` command flags in the termina
 - I can add an untracked file to the staging area: `git add style.css` then it gets a simple `A ` flag
 - I can modify and save a staged file eg. "make a body background-color" in the `style.css` then it has `AM` or `MM` flag as added but then modified again so it has staged and unstaged changes, if I commit now only the staged changes will be committed eg. "css reset but no background-color"
 - I can modify and save an unstaged but tracked file eg. the `index.html` file is unchanged since the last clone/pull/push action, so I can "create a new div" in the `index.html` then it has ` M` flag as unstaged but modified, if I commit now, this div will be not committed
-I can check these changes in the Source Control Panel in VSCode: Staged Changes: style.css M, Changes: index.html M, style.css M
-So I can see that before commit and push I have to add the index.html and the style.css again to the staging area.
 
-I work on my workspace and make changes and save
-To push to my GitHub repository 
-1. I have to add all my modified files to the staging area `git add .`
-2. I have to commit (all staged files) with a message `git commit -m 'short description my changes'`
-3. I have to push to origin/master on GitHub `git push` 
+I can check these changes in the Source Control Panel in VSCode: **Staged Changes**: style.css M, **Changes**: index.html M, style.css M
+
+So I can see that before I commit and push I have to add the index.html and the style.css again to the staging area.
+
+I work on my workspace and make changes and save and push to my GitHub repository as 
+1. I add all my modified files to the staging area `git add .`
+2. I commit (all staged files) with a message `git commit -m 'short description my changes'`
+3. I push to origin/master on GitHub `git push` 
 
 BUT to collaborate to the GitHub repository with Alice: 
 1. I have to add all my modified files to the staging area `git add .`
@@ -95,5 +96,5 @@ BUT to collaborate to the GitHub repository with Alice:
 4. I have to resolve the diffs if any
 3. I have to push to origin/master on GitHub `git push`
 
-Notes to myself: The `git add .` command not always the best choice, I can add unwanted or temporary files to the staging area so be careful and learn more about .gitignore some time, which can help.
+Notes to myself: The `git add .` command not always the best choice, I can add unwanted or temporary files to the staging area so be careful and learn more about .gitignore, which can help.
 The `git commit` without message doesn't work, always provide a description.
