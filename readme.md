@@ -81,7 +81,7 @@ I learn the `git status -s` or `git status --short` command flags in the termina
 - I can modify and save an untracked file, like making a small css reset in the `style.css`; then it is still untracked with the `??` flag
 - I can add an untracked file to the staging area: `git add style.css` then it gets a simple `A ` flag
 - I can modify and save a staged file, eg. adding a body background-color in the `style.css`, then it has `AM` or `MM` flag as added but then modified again, so it has both staged and unstaged changes, if I commit now, only the staged changes will be committed (css reset but no background-color)
-- I can modify and save a tracked file, like the `index.html`, which was unchanged since the last clone/pull/push action, for example I can create a new div. Then it will have the ` M` flag, meaning unstaged but modified. If I commit now, this div will be not committed!
+- I can modify and save a tracked file, like the `index.html`, which was unchanged since the last clone/pull/push action, for example I can create a new div. Then it will have the `' M'` flag, meaning unstaged but modified. If I commit now, this div will be not committed!
 
 I can check these changes in the Source Control Pane in VSCode: **Staged Changes**: style.css M, **Changes**: index.html M, style.css M
 
