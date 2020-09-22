@@ -44,7 +44,7 @@ I create a new repository on GitHub and push the existing local one to that
         - `git push --set-upstream origin master`
 6) I type `git log` and `git status` to check if it's ok :)
 
-Notes myself: Make sure you already committed, else the push fails and the `git log` command says:
+Notes to myself: Make sure you already committed, else the push fails and the `git log` command says:
 ```
 fatal: your current branch 'master' does not have any commits yet
 ```
@@ -71,3 +71,29 @@ I accept the invitation and clone Alice's repository
    - I can type `git clone https://github.com/olivabigyo/test_project.git student_project` if I want to rename the project in my workspace to student_project
 7) I navigate in with typing `cd test_project` or `cd student_project` if I renamed it
 8) I type `git status` to check if it's ok :)
+
+#### Bob's Workflow
+I learn the `git status -s` or `git status --short` command flags in the terminal
+- I can create a file eg.`style.css` then it is untracked, if I type `git status -s` or `git status --short` in the terminal then `style.css` has `??` flag
+- I can modify and save an untracked file eg."make a small css reset" in the `style.css` then it is still untracked with `??` flag 
+- I can add an untracked file to the staging area: `git add style.css` then it gets a simple `A ` flag
+- I can modify and save a staged file eg. "make a body background-color" in the `style.css` then it has `AM` or `MM` flag as added but then modified again so it has staged and unstaged changes, if I commit now only the staged changes will be committed eg. "css reset but no background-color"
+- I can modify and save an unstaged but tracked file eg. the `index.html` file is unchanged since the last clone/pull/push action, so I can "create a new div" in the `index.html` then it has ` M` flag as unstaged but modified, if I commit now, this div will be not committed
+I can check these changes in the Source Control Panel in VSCode: Staged Changes: style.css M, Changes: index.html M, style.css M
+So I can see that before commit and push I have to add the index.html and the style.css again to the staging area.
+
+I work on my workspace and make changes and save
+To push to my GitHub repository 
+1. I have to add all my modified files to the staging area `git add .`
+2. I have to commit (all staged files) with a message `git commit -m 'short description my changes'`
+3. I have to push to origin/master on GitHub `git push` 
+
+BUT to collaborate to the GitHub repository with Alice: 
+1. I have to add all my modified files to the staging area `git add .`
+2. I have to commit (all staged files) with a message `git commit -m 'short description my changes'`
+3. I have to pull from GitHub to see if Alice made changes `git pull`
+4. I have to resolve the diffs if any
+3. I have to push to origin/master on GitHub `git push`
+
+Notes to myself: The `git add .` command not always the best choice, I can add unwanted or temporary files to the staging area so be careful and learn more about .gitignore some time, which can help.
+The `git commit` without message doesn't work, always provide a description.
